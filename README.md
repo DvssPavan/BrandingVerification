@@ -5,8 +5,7 @@
   
   2. Python Modules
       ```bash
-      pip install pywin32-ctypes
-      pip install pywin32
+      pip install pyodbc
       ```
 ## System Compatibility Requirements
   1. Registry Permissions:
