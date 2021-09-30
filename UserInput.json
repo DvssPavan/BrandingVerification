@@ -16,10 +16,10 @@
                 "WaitForUserToSetupDSN": false,
                 "DataSourceConfiguration": {
                     "Description": "IBM Facebook DSN",                    
-					"Dsn": "IBM Facebook"
+		    "Dsn": "IBM Facebook"
                 },
-				"MetadataTesterPath": "C:\\Users\\fparmar\\Desktop\\Facebook\\MetaTester\\bin\\x64\\Debug",
-				"inDriverBit": 64
+		"MetadataTesterPath": "C:\\Users\\fparmar\\Desktop\\Facebook\\MetaTester\\bin\\x64\\Debug",
+		"inDriverBit": 64
             }
         ]
     }
