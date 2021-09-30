@@ -23,13 +23,11 @@
       2) Navigate to the above mentioned paths.
       3) Go to Permissions by right clicking on them
       4) Allow `Full Control` for the current user & ALL APPLICATION PACKAGES
-
-
-        ![img.png](img.png)
+![img.png](img.png)
 
 ## Input:
       1. DSN Name                    - Datasource Name (i.e. "IBM Facebook")
-      2. MetaData Tester Path        - Path to Metadata tester's bin
+      2. MetaData Tester Path        - Path to Metadata tester's "Bin" folder
       3. System Bit                  - 32 / 64 (As per system configuration)
   
 # Usage
