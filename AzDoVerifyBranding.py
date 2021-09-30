@@ -100,6 +100,7 @@ def main(DSN_Name: str, MetaData_path: str, inDriverBit: int):
     else:            
         
         #Set UseEncryptedEndpoints to 1( Default Value)
+        inDriverBit = int(inDriverBit)
         inDriverRegistryConfig = {"UseEncryptedEndpoints":"1"}
         GetSetRegistry(DSN_Name,inDriverBit,inDriverRegistryConfig)
         
