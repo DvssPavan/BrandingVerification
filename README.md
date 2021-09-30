@@ -1,4 +1,5 @@
 # Verify Branding Automation in Azure
+It automates the branding verification test for any 32/64 bit driver.
 
 ## Requirements:
   1. [Python](https://www.python.org/downloads/)
