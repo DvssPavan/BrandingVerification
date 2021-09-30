@@ -98,6 +98,12 @@ def main(DSN_Name: str, MetaData_path: str, inDriverBit: int):
     elif not os.path.exists(MetaData_path):
         print(f"Error: Invalid Path {MetaData_path}")
     else:            
+        
+        #Set UseEncryptedEndpoints to 1( Default Value)
+        inDriverRegistryConfig = {"UseEncryptedEndpoints":"1"}
+        GetSetRegistry(DSN_Name,inDriverBit,inDriverRegistryConfig)
+        
+        
         pyodbc.pooling = False
         pyodbc.autocommit = True      
         inDriverBit = int(inDriverBit)
