@@ -22,14 +22,14 @@
         ![img.png](img.png)
 ## Input:
   1. `DSN Name                    `- `Datasource Name (i.e. "IBM Facebook")`
-  2. `MetaData Tester Path        `- `Path to Metadata tester's exe`
+  2. `MetaData Tester Path        `- `Path to Metadata tester's bin`
   3. `System Bit                  `- `32 / 64 (As per system configuration)`
   
 # Usage
 - To Vertify Branding
   
-      python AzDoVerifyBranding.py <DSN Name> <Path to Metadata tester> <System Bits>
+      python AzDoVerifyBranding.py <DSN Name> <Path to Bin of Metadata tester> <System Bits>
 
 - Give valid path which is accepted for python as mentioned below
 
-      python AzDoVerifyBranding.py "IBM Facebook" "C:\\Users\\fparmar\\Desktop\\Facebook\\MetaTester\\bin\\x64\\Debug" 64
+      python AzDoVerifyBranding.py "IBM Facebook" "C:\\Users\\fparmar\\Desktop\\Facebook\\MetaTester\\bin" 64
