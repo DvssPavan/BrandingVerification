@@ -116,7 +116,6 @@ def main(DSN_Name: str, MetaData_path: str, inDriverBit: int):
 
 
         #Start finding DLL path
-        inDriverRegistryConfig = {"UseEncryptedEndpoints":"1"}
         GetSetRegistry(DSN_Name,inDriverBit,inDriverRegistryConfig)        
         #END finding DLL path
         
