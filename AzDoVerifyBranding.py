@@ -132,6 +132,7 @@ def main(DSN_Name: str, MetaData_path: str, inDriverBit: int):
         #Generating the Error Message      
         if(inDriverBit == 64):                 
             MetaData_path = os.path.join(MetaData_path,"x64","Debug")
+            print(MetaData_path)
             os.chdir(MetaData_path)
             ErrMsgStr = sp.getoutput("MetaTester64.exe -d \"{}\" -o ErrorMessage.txt".format(DSN_Name))
         elif(inDriverBit == 32):                 
