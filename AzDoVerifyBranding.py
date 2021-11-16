@@ -131,7 +131,7 @@ def main(DSN_Name: str, MetaData_path: str, inDriverBit: int):
               
         #Generating the Error Message      
         if(inDriverBit == 64):
-            print(MetaDat_path)
+            print(MetaData_path)
             MetaData_path = os.path.join(MetaData_path,"x64","Debug")
             print(MetaData_path)
             os.chdir(MetaData_path)
