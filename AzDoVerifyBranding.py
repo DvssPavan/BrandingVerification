@@ -130,7 +130,8 @@ def main(DSN_Name: str, MetaData_path: str, inDriverBit: int):
         GetSetRegistry(DSN_Name,inDriverBit,inDriverRegistryConfig)
               
         #Generating the Error Message      
-        if(inDriverBit == 64):                 
+        if(inDriverBit == 64):
+            print(MetaDat_path)
             MetaData_path = os.path.join(MetaData_path,"x64","Debug")
             print(MetaData_path)
             os.chdir(MetaData_path)
