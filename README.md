@@ -28,7 +28,7 @@ It automates the branding verification test for any 32/64 bit driver.
 
 ## Input:
       1. DSN Name                    - Datasource Name (i.e. "IBM Facebook")
-      2. MetaData Tester Path        - Path to Metadata tester's "Bin" folder
+      2. MetaData Tester Path        - Path to Base Directory which has MetaDataTester.exe
       3. System Bit                  - 32 / 64 (As per system configuration)
   
 # Usage
