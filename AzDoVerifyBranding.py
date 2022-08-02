@@ -4,7 +4,7 @@ import os
 import platform
 import winreg
 import sys
-
+from shutil import copy
 #declaring one global varibale
 OdbcLibDriverPath = ""
 
@@ -131,17 +131,20 @@ def main(DSN_Name: str, MetaData_path: str, inDriverBit: int):
         #Generating the Error Message      
         if(inDriverBit == 64):
             print(MetaData_path)
+            baseDirectoryPath=MetaData_path
             MetaData_path = os.path.join(MetaData_path,"x64","Debug")
             print(MetaData_path)
             if not os.path.exists(MetaData_path):
-               os.mkdir(MetaData_path)
+               os.makedirs(MetaData_path)
             os.chdir(MetaData_path)
+            copy(baseDirectoryPath+'\MetaTester64.exe',MetaData_path)
             ErrMsgStr = sp.getoutput("MetaTester64.exe -d \"{}\" -o ErrorMessage.txt".format(DSN_Name))
         elif(inDriverBit == 32):                 
             MetaData_path = os.path.join(MetaData_path,"Win32","Debug")
             if not os.path.exists(MetaData_path):
-               os.mkdir(MetaData_path)
+               os.makedirs(MetaData_path)
             os.chdir(MetaData_path)
+            copy(baseDirectoryPath+'\MetaTester32.exe',MetaData_path)
             ErrMsgStr = sp.getoutput("MetaTester32.exe -d \"{}\" -o ErrorMessage.txt".format(DSN_Name))
         else:
             print("Error: Invalid Driver Bit.")
@@ -153,6 +156,7 @@ def main(DSN_Name: str, MetaData_path: str, inDriverBit: int):
         
         #Start Reading ErrorMessage to find Component name and Vendor name    
         ErrMsgPath = os.path.join(MetaData_path,"ErrorMessage.txt")
+        #print(ErrMsgPath)
         ReadErrMsgs(ErrMsgPath)
     
 if __name__ == '__main__':
