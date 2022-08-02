@@ -134,10 +134,14 @@ def main(DSN_Name: str, MetaData_path: str, inDriverBit: int):
             print(MetaData_path)
             MetaData_path = os.path.join(MetaData_path,"x64","Debug")
             print(MetaData_path)
+            if not os.path.exists(MetaData_path):
+               createDir(MetaData_path)
             os.chdir(MetaData_path)
             ErrMsgStr = sp.getoutput("MetaTester64.exe -d \"{}\" -o ErrorMessage.txt".format(DSN_Name))
         elif(inDriverBit == 32):                 
             MetaData_path = os.path.join(MetaData_path,"Win32","Debug")
+            if not os.path.exists(MetaData_path):
+               createDir(MetaData_path)
             os.chdir(MetaData_path)
             ErrMsgStr = sp.getoutput("MetaTester32.exe -d \"{}\" -o ErrorMessage.txt".format(DSN_Name))
         else:
